@@ -36,5 +36,13 @@ class ArrayFlattenerTestCase(unittest.TestCase):
         with self.assertRaises(KeyError):
             array_flattner.get_result(result_type)
 
+    def test_get_result_obj_json(self):
+        sample = [[1,2,[3]],4]
+        result_type = 'json'
+        array_flattner = ArrayFlattener(sample)
+        array_flattner.process()
+        json.loads(array_flattner.get_result(result_type))
+        self.assert_(True)
+
 if __name__ == "__main__":
     unittest.main()
