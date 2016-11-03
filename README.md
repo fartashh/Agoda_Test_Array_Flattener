@@ -25,7 +25,8 @@ git clone https://github.com/fartashh/Agoda_Test_Array_Flattener
 
 
 ```
- 
+ python array_flattener.py -a '[1,2,3,[3,5,6]]'
+ python array_flattener.py -a '[1,2,3,[1,[3],[4],[6]]]' 
 ```
 
 
