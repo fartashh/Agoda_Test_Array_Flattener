@@ -21,7 +21,7 @@ git clone https://github.com/fartashh/Agoda_Test_Array_Flattener
   python test_array_flattener.py 
 ```
 
-## Running the Downloader
+## Running the Flattener
 
 
 ```
