@@ -1,4 +1,5 @@
 import json
+import argparse
 
 
 class ArrayFlattener(object):
@@ -34,3 +35,11 @@ class ArrayFlattener(object):
                     yield _elm
             except:
                 yield elm
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a','--array', help='<Required> array in json type', required=True, dest='array', type=json.loads)
+    args = parser.parse_args()
+    array_flattener = ArrayFlattener(args.array)
+    array_flattener.process()
+    print(array_flattener.get_result())
